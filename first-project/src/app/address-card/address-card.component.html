@@ -1,0 +1,17 @@
+<div class="container mt-5 animated fadeInUp">
+
+
+<div class="card text-white bg-primary mb-3 " style="max-width: 18rem;">
+  <h2 class="card-header">{{user.name}}</h2>
+  <div class="card-body">
+    <h5 class="card-title">{{user.field}}</h5>
+    <div class="card-text">
+      <p>{{user.address}}</p>
+      <div *ngIf = "user.contact.length">
+        <p style="color:white">Contact Details:</p>
+        <p *ngFor= "let contact_no of user.contact"  > {{contact_no}} </p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
