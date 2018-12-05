@@ -20,12 +20,6 @@ export class AddressCardComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.user = {
-    //   name: this.user.name,
-    //   desigination: this.user.desigination,
-    //   address: this.user.address,
-    //   contact: this.user.contact,
-    // };
 
   }
 
