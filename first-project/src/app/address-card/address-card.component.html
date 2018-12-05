@@ -5,15 +5,17 @@
   <h2 class="card-header">{{user.name}}</h2>
   <div class="card-body">
     <h5 class="card-title">{{user.desigination}}</h5>
-    <div class="card-text">
+    <button *ngIf="!isCollapsed" (click)="toggleCollapse()" class="btn btn-success animated fadeInDown delay-1s wow"> Collapse </button>
+    <button *ngIf="isCollapsed" (click)="toggleCollapse()" class="btn btn-success animated fadeInDown delay-1s wow"> Expand </button>
+    <div *ngIf = "!isCollapsed"  class="card-text">
       <p>{{user.address}}</p>
       <div *ngIf = "user.contact.length">
         <p style="color:white">Contact Details:</p>
         <p *ngFor= "let contact_no of user.contact"  > {{contact_no}} </p>
       </div>
     </div>
+  
   </div>
 </div>
 </div>
 
-<p class="card-title"> In the address-card component </p>
