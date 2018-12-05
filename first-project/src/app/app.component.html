@@ -1,31 +1,44 @@
 <date></date>
 <address-card [user] = "user"> </address-card>
 
-<div class="container row">
-	<div class="col-6">
-		<p>Example of two way data binding:</p>
-		<input type="text" [(ngModel)]="textInput">	
-		<br>
-		{{textInput}}
+<div class="container">
+	<div class="card card-danger m-2">
+		<div class="card-header  p-2">Example of two way data binding:</div>
+		<div class="card-body">
+			<input type="text" [(ngModel)]="textInput">
+			<p>{{textInput}}</p>
+		</div>
 	</div>
 
-	<div class="col-6">
-	<pre style="font-size: 120%">
-		Data Flow:
-		[ ] -> component to view
-		( ) -> view to component
+	<div class="row notes">
+		<div class="col-4">
+			<div>
+				<b>Data Flow:</b><br>
+				[ ] -> component to view<br>
+				( ) -> view to component
+			</div>
+		</div>
+		<div class="col-4">
+			<div>
+				<b>One way binding:</b><br>
+				Either [ ] or ( )<br>
+				<b>Two way binding:</b><br>
+				[( )] : Banana in the box
+			</div>
+		</div>
+		<div class="col-4">
+			<div>
+				<b>Directives:</b><br>
+				*ngIf<br>
+				*ngFor<br>
+				*ngModel
+			</div>
+		</div>
+	<div style="font-size: 120%">
+		
 
-		One way binding:
-		Either [ ] or ( )
-
-		Two way binding:
-		[( )] : Banana in the box
-		Directives:
-		*ngIf
-		*ngFor
-		*ngModel
-	</pre>
+	</div>
 	</div>
 </div>
 
-
+<app-new></app-new>	

@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DateComponent } from './date/date.component';
 import { AddressCardComponent } from './address-card/address-card.component';
+import { NewmoduleModule } from './newmodule/newmodule.module';
+
 
 @NgModule({
   declarations: [
@@ -15,8 +17,9 @@ import { AddressCardComponent } from './address-card/address-card.component';
   ],
   imports: [
     BrowserModule,
+    NewmoduleModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
