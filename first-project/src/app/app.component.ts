@@ -8,7 +8,9 @@ import { User } from './address-card/user.model';
 })
 export class AppComponent { 
 	user:User;
-	
+	textInput:string = "Initial Value";
+
+
 	constructor() {
 	this.user = new User();
       this.user.name= 'Gaurav Saxena',
