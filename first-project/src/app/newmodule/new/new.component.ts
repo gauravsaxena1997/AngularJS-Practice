@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TestService } from '../../test.service';
 
 @Component({
   selector: 'app-new',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewComponent implements OnInit {
 
-  constructor() { }
+	service:string = "";
+  constructor(private svc: TestService) {
+  	this.service = this.svc.printToConsole('Service inside another module. !!')
+
+   }
 
   ngOnInit() {
   }
