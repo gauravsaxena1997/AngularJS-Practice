@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { DateComponent } from './date/date.component';
 import { AddressCardComponent } from './address-card/address-card.component';
 import { NewmoduleModule } from './newmodule/newmodule.module';
+import { TestService } from './test.service';
 
 
 @NgModule({
@@ -21,7 +22,9 @@ import { NewmoduleModule } from './newmodule/newmodule.module';
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [
+    TestService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
