@@ -1,6 +1,13 @@
 <p>
-  settings works!
+  Settings App
 </p>
+<ul style="display: inline;">
+  <li *ngFor="let route of routes" class="nav-item">
+    <a  routerLink="{{route.url}}">
+      {{route.linkName}} 
+    </a>
+  </li>
+</ul>
 
 
 <router-outlet></router-outlet>
