@@ -7,5 +7,6 @@ export class TestService {
 
   printToConsole (arg) {
   	console.log(arg);
+  	return arg;
   }
 }

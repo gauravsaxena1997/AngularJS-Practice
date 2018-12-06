@@ -42,7 +42,7 @@
 </div>
 
 <app-new></app-new>	
-
+<hr>
 <div class="container">
 	<h2>Services</h2>
 	<h3>Angular Notations:</h3>
@@ -51,11 +51,22 @@
 		<li>@Component: Angular Component</li>
 		<li>@Injectable: Angular Service</li>
 	</ul>
-	<p>Services that are used in the module are declared inside: 'providers' array.</p>
 	<h3>@NgModule consist of different parts:</h3>
 	<ul>
 		<li>declarations: Contain all the components used by the module.</li>
 		<li>imports: Contain all other modules needed for the module.</li>
 		<li>providers: Contain all the services used by the module.</li>
 	</ul>
+	<h4>Create a dependency injection:</h4>
+	<ol>
+		<li>Create a service: ng generate service service_name</li>
+		<li>Services that are used in a module are declared inside: 'providers' array in app.module</li>
+		<li>Import the service in the component where the service is used in app.component</li>
+		<li>Inject the service in the constructor as: <br>
+	 		constructor(svc: TestService)
+	 	</li>
+	</ol>
+	<div class="card card-body">
+		<p>Result: {{service}}</p>	
+	</div>
 </div>

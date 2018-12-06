@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { User } from './address-card/user.model';
+import { TestService } from './test.service';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,13 @@ import { User } from './address-card/user.model';
 export class AppComponent { 
 	user:User;
 	textInput:string = "Initial Value";
+  service:string = "";
+
+	constructor(private svc: TestService) {
+ 
+   this.service = this.svc.printToConsole('Got the service !!');
 
 
-	constructor() {
 	this.user = new User();
       this.user.name= 'Gaurav Saxena',
       this.user.desigination= 'Front-End Developer',
