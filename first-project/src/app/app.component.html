@@ -70,3 +70,46 @@
 		<p>Result: {{service}}</p>	
 	</div>
 </div>
+
+<hr>
+<div class="container">
+	<h3>HttpClient</h3>
+	<h4>Steps:</h4>
+	<ol>
+		<li>Import the module: HttpClientModule from '@angular/common/http'</li>
+		<li>Import the angular module in imports array under @NgModule</li>
+		<li>Import in the component: HttpClient from '@angular/common/http'</li>
+		<li>Inject in the contructor to instantiate:  private http: HttpClient</li>
+		<li>Make a http call like get request: this.http.get('https://api.github.com/users/gurvsxen487')
+			<br>
+			 - It makes a asynchronous call. <br>
+			 - The asynchronous call return a <b>observable</b> (Promises in angular 1) <br>
+			 - We can excute a function to make sure the asynchronous call is done. <br>
+			 - It is the done by <b>subscribe</b> function present in http service.
+		</li>
+		<li>We can see the response by the <b>response</b> object by passing it as a argument in subscribe function.</li>
+		<li>See the result in the console.</li>
+	</ol>
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
