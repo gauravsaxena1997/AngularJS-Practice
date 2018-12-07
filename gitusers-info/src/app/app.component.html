@@ -1,31 +1,44 @@
-<form class=" jumbotron p-2 row animated fadeInUp">
-    <div class="animated fadeInUp dealy-1s container">
-      <p class="h4 mb-4">Enter the Github Username</p>
+<div class="container-fluid">
+  <form class=" jumbotron p-2 row animated fadeInUp">
+      <div class="animated fadeInUp dealy-1s container">
+        <p class="h4 mb-4">Enter the Github Username</p>
 
-        <div class="md-form">
-          <i class="fa fa-user prefix"></i>
-          <input [(ngModel)]="userName" type="text" [ngModelOptions]="{standalone: true}" placeholder="Username">
-        </div>
-      <button (click)="search()" class="btn btn-info">Submit</button>
-    </div>
-</form>
+          <div class="md-form">
+            <i class="fa fa-github prefix"></i>
+            <input [(ngModel)]="userName" type="text" [ngModelOptions]="{standalone: true}" placeholder="Username">
+          </div>
+        <button (click)="search()" class="btn btn btn-info">Submit</button>
+      </div>
+  </form>
 
-<div *ngIf = "response" class="row m-4 p-3 ">
-    <img class="animated fadeInDown offset-1 img-thumbnail" src="{{response.avatar_url}}" width="300px" height="300px">
-    <div class="animated fadeInUp card card-outline-danger offset-2  p-0 col-5">
-        <h4 class="card-header card-inverse">{{response.name}}</h4>
-        <div class="card-body row">
-          <div class="col-4">Username </div>
-          <div class="col-8">{{response.login}} </div>
-          <div class="col-4"> Location</div>
-          <div class="col-8"> {{response.location}}</div>
-          <div class="col-4"> No of public Repos</div>
-          <div class="col-8"> {{response.public_repos}}</div>
-          <div class="col-4"> Following</div>
-          <div class="col-8"> {{response.following}}</div>
-        </div>
-        <div class="card-footer">
-            <a href="{{response.html_url}}" target="_blank"><div class="btn btn-info">Go to profile</div></a>         
-        </div>
+  <div *ngIf = "response" class="row">
+
+  <div class="img-card animated fadeInDown offset-md-2 col-sm-10 offset-sm-1 col-md-3">
+    <div class="card">
+      <img class="card-img-top" src="{{response.avatar_url}}" alt="Avatar" width="250px" height="250px">
+      <div class="card-body bg-dark p-1 m-0">
+        <h4 class="card-title text-center text-light">Avatar</h4>
+      </div>
     </div>
+  </div>
+
+
+      <div class="animated fadeInUp card p-0 col-12 m-0 col-lg-5 p-1 mt-sm-4 m-md-0">
+          <h4 class="card-header">{{response.name}}</h4>
+          <div class="card-body row p-0">
+            <div class="col-6 offset-lg-1 col-lg-4">Username </div>
+            <div class="col-6 col-lg-7">{{response.login}} </div>
+            <div class="col-6 offset-lg-1 col-lg-4"> Location</div>
+            <div class="col-6 col-lg-7"> {{response.location}}</div>
+            <div class="col-6 offset-lg-1 col-lg-4"> No of public Repos</div>
+            <div class="col-6 col-lg-7"> {{response.public_repos}}</div>
+            <div class="col-6 offset-lg-1 col-lg-4"> Following</div>
+            <div class="col-6 col-lg-7"> {{response.following}}</div>
+          </div>
+          <div class="card-footer">
+              <a href="{{response.html_url}}" target="_blank"><div class="btn btn-info">Go to profile</div></a>         
+          </div>
+      </div>
+  </div>
+  
 </div>

@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 
 export class AppComponent {
 	
-	userName:string = "gurvsxen487";
+	userName:string = "";
 	response:any;
 	constructor(private http: HttpClient) {
 	}
